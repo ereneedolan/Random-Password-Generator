@@ -60,10 +60,16 @@ function generatePassword() {
 //     return Math.floor(Math.random() * lengthOfPassword - 1);
 // }
 
-for (var i = 0; i <= lengthOfPassword; i++) {
-  var finishedPassword = Math.floor(Math.random() * chars.length);
-  password += chars.substring(randomNumber, randomNumber +1);
- }
+const generatePassword = (length, characters) => {
+  let finishedPassword = "";
+  for (let i = 0; i < length; i++) {
+    finishedPassword += characters.charAt(
+      Math.floor(Math.random() * characters.length)
+    );
+  }
+  return finishedPassword;
+};
+
 
 // for (let i = 0; i < .length; i++) {
 //    += [i] + "";
@@ -73,7 +79,6 @@ for (var i = 0; i <= lengthOfPassword; i++) {
 
 
 // get a random number generated from math random, math floor and then put in loop, add results from charactersForPasswordcharat to variable finished password then return that
-charactersForPassword.charAt()
 
 
 

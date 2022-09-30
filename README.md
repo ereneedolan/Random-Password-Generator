@@ -10,11 +10,8 @@
 
 ## Screenshot
 
-  
+![Image Here](https://raw.githubusercontent.com/ereneedolan/Random-Password-Generator/732a19562d67303e6b645da4a0f5f4398fb6effc/Images/Screen%20Shot%202022-09-29%20at%2011.25.01%20PM.png)
 
-![Image Here](Insert URL of Screenshot)
-
-  
 
 ## Description
 

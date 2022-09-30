@@ -17,8 +17,6 @@ function generatePassword() {
   // number of character
   // whether they chose numbers, lowercase, uppercase or special characters
 
-
-
   //how many characters do you want to use? some number
   // do you want to use numbers? yes or no
   // do you want to use lowercase characters? yes or no
@@ -58,15 +56,20 @@ function generatePassword() {
     return
   }
 
-function getRandomInt(max) {
-    return Math.floor(Math.random() * lengthOfPassword - 1);
-}
+// function getRandomInt(max) {
+//     return Math.floor(Math.random() * lengthOfPassword - 1);
+// }
 
-for (let i = 0; i < .length; i++) {
-  text += cars[i] + "<br>";
-}
+for (var i = 0; i <= lengthOfPassword; i++) {
+  var finishedPassword = Math.floor(Math.random() * chars.length);
+  password += chars.substring(randomNumber, randomNumber +1);
+ }
+
+// for (let i = 0; i < .length; i++) {
+//    += [i] + "";
+// }
   
-var finishedPassword = ""
+// var finishedPassword = ""
 
 
 // get a random number generated from math random, math floor and then put in loop, add results from charactersForPasswordcharat to variable finished password then return that

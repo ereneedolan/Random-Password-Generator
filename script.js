@@ -25,10 +25,10 @@ function generatePassword() {
   // do you want to use uppercase characters? yes or no
   // do you want to use special characters? yes or no
 
-  var uppercase = "ABCD"
+  var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   var uppercaseResponse = confirm("Do you want to use uppercase letters in your password?")
 
-  var lowercase = "abcd"
+  var lowercase = "abcdefghijklmnopqrstuvwxyz"
   var lowercaseResponse = confirm("Do you want to use lowercase letters in your password?")
 
   var specialChacters = " !#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\""
@@ -58,8 +58,17 @@ function generatePassword() {
     return
   }
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * lengthOfPassword - 1);
+}
+
+for (let i = 0; i < .length; i++) {
+  text += cars[i] + "<br>";
+}
   
 var finishedPassword = ""
+
+
 // get a random number generated from math random, math floor and then put in loop, add results from charactersForPasswordcharat to variable finished password then return that
 charactersForPassword.charAt()
 

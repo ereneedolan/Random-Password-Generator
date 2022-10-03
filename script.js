@@ -3,9 +3,6 @@
 // var generateBtn = document.querySelectorAll('#generate');
 
 
-
-function generatePassword() {
-
   //Data
 
   //we need different sets of characters (use variables) - maybe strings or arrays, string give us the benefit of using indices to target things at different positions
@@ -22,33 +19,38 @@ function generatePassword() {
   // do you want to use lowercase characters? yes or no
   // do you want to use uppercase characters? yes or no
   // do you want to use special characters? yes or no
+  
+  function generatePassword() {
 
-  var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  var uppercaseResponse = confirm("Do you want to use uppercase letters in your password?")
+  var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var uppercaseResponse = confirm("Do you want to use uppercase letters in your password?");
 
-  var lowercase = "abcdefghijklmnopqrstuvwxyz"
-  var lowercaseResponse = confirm("Do you want to use lowercase letters in your password?")
+  var lowercase = "abcdefghijklmnopqrstuvwxyz";
+  var lowercaseResponse = confirm("Do you want to use lowercase letters in your password?");
 
-  var specialChacters = " !#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\""
-  var specialCharactersResponse = confirm("Do you want to use special characters in your passwor?")
+  var specialChacters = " !#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\"";
+  var specialCharactersResponse = confirm("Do you want to use special characters in your passwor?");
 
-  var number = "1234567890"
-  var numberResponse = confirm("Do you want to use numbers in your password?")
+  var number = "1234567890";
+  var numberResponse = confirm("Do you want to use numbers in your password?");
 
-  var charactersForPassword = ""
+  var charactersForPassword = "";
 
   if (uppercaseResponse === true) {
-    charactersForPassword = uppercase + charactersForPassword
+    charactersForPassword = uppercase + charactersForPassword;
   }
   if (lowercaseResponse === true) {
-    charactersForPassword = lowercase + charactersForPassword
+
+    charactersForPassword = lowercase + charactersForPassword;
   }
   if (specialCharactersResponse === true) {
-    charactersForPassword = specialChacters + charactersForPassword
+    charactersForPassword = specialChacters + charactersForPassword;
   }
   if (numberResponse === true) {
-    charactersForPassword = number + charactersForPassword
+    charactersForPassword = number + charactersForPassword;
   }
+
+  var password = ""
 
   var lengthOfPassword = prompt("Please choose a password length between 8 and 128 characters")
   if (!(lengthOfPassword >= 8) && !(lengthOfPassword <= 128)) {
@@ -56,40 +58,17 @@ function generatePassword() {
     return
   }
 
-// function getRandomInt(max) {
-//     return Math.floor(Math.random() * lengthOfPassword - 1);
-// }
 
 const generatePassword = (length, characters) => {
   let finishedPassword = "";
-  for (let i = 0; i < length; i++) {
-    finishedPassword += characters.charAt(
-      Math.floor(Math.random() * characters.length)
-    );
+  for (let i = 0; i < lengthOfPassword; i++) {
+  var randomIndex = Math.floor(Math.random() * charactersForPassword.length);
+  var randomCharacter = charactersForPassword[randomIndex];
+  password += randomCharacter;
   }
-  return finishedPassword;
+  return password;
 };
 
-
-// for (let i = 0; i < .length; i++) {
-//    += [i] + "";
-// }
-  
-// var finishedPassword = ""
-
-
-// get a random number generated from math random, math floor and then put in loop, add results from charactersForPasswordcharat to variable finished password then return that
-
-
-
-  // randomly select characters from all of the selected characters
-  // put them together
-
-
-  return finishedPassword
-}
-
-var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
@@ -99,6 +78,6 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
 // Add event listener to generate button
+
 generateBtn.addEventListener("click", writePassword);

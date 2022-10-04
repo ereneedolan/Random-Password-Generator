@@ -1,9 +1,8 @@
 // Assignment code here
 
-// var generateBtn = document.querySelectorAll('#generate');
+var generateBtn = document.querySelector('#generate');
 
   //Data
-
   //we need different sets of characters (use variables) - maybe strings or arrays, string give us the benefit of using indices to target things at different positions
   //number
   //ordered list to store use arrays and strings for indices and randomly select things

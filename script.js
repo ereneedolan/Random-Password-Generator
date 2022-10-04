@@ -2,7 +2,6 @@
 
 // var generateBtn = document.querySelectorAll('#generate');
 
-
   //Data
 
   //we need different sets of characters (use variables) - maybe strings or arrays, string give us the benefit of using indices to target things at different positions
@@ -50,6 +49,7 @@
     charactersForPassword = number + charactersForPassword;
   }
 
+
   var password = ""
 
   var lengthOfPassword = prompt("Please choose a password length between 8 and 128 characters")
@@ -59,8 +59,7 @@
   }
 
 
-const generatePassword = (length, characters) => {
-  let finishedPassword = "";
+// const generatePassword = (length, characters) => {
   for (let i = 0; i < lengthOfPassword; i++) {
   var randomIndex = Math.floor(Math.random() * charactersForPassword.length);
   var randomCharacter = charactersForPassword[randomIndex];
@@ -68,7 +67,6 @@ const generatePassword = (length, characters) => {
   }
   return password;
 };
-
 
 // Write password to the #password input
 function writePassword() {
